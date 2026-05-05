@@ -17,6 +17,18 @@
   --accent:     #6649ae;
   --border:     #e5e7eb;
   --text-muted: #6b7280;
+
+  /* Accent scale — used by Amplify UI theme and any component needing tints */
+  --accent-10:  #f3f0ff;
+  --accent-20:  #e9e3ff;
+  --accent-40:  #d4c8ff;
+  --accent-60:  #a991e8;
+  --accent-80:  #6649ae;  /* = --accent */
+  --accent-90:  #4f3490;
+  --accent-100: #3a2270;
+
+  /* Focus ring */
+  --focus-ring: 0 0 0 2px color-mix(in srgb, var(--accent) 20%, transparent);
 }
 
 /* ── Dark theme ─────────────────────────────────────────────────────────── */
@@ -27,4 +39,16 @@
   --accent:     #cbbeff;
   --border:     #2d2d2d;
   --text-muted: #9ca3af;
+
+  /* Accent scale — dark variants */
+  --accent-10:  #1e1a2e;
+  --accent-20:  #2d2550;
+  --accent-40:  #4a3a80;
+  --accent-60:  #8b6fd4;
+  --accent-80:  #cbbeff;  /* = --accent */
+  --accent-90:  #ddd0ff;
+  --accent-100: #ede8ff;
+
+  /* Focus ring */
+  --focus-ring: 0 0 0 2px color-mix(in srgb, var(--accent) 20%, transparent);
 }
