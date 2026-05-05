@@ -1,0 +1,69 @@
+/* contact.module.css — mobile-first */
+
+.page { width: 100%; padding: 2.5rem 1rem 4rem; }
+.inner { max-width: 900px; margin: 0 auto; }
+
+.title { font-size: 1.75rem; font-weight: 800; color: #111827; margin-bottom: 0.625rem; }
+.subtitle { font-size: 1rem; color: #6b7280; margin-bottom: 2.5rem; line-height: 1.65; }
+
+/* Mobile: stacked */
+.grid { display: flex; flex-direction: column; gap: 2.5rem; }
+
+.detailItem { margin-bottom: 1.5rem; }
+.detailHeading { font-size: 0.875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #9ca3af; margin-bottom: 0.375rem; }
+.detailLink { font-size: 0.9375rem; color: #6649ae; text-decoration: none; }
+.detailLink:hover { text-decoration: underline; }
+.address { font-size: 0.9375rem; color: #374151; font-style: normal; line-height: 1.6; }
+
+.form { display: flex; flex-direction: column; gap: 1.125rem; }
+.field { display: flex; flex-direction: column; gap: 0.375rem; }
+.label { font-size: 0.875rem; font-weight: 500; color: #374151; }
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 0.625rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1rem; /* 16px prevents iOS zoom */
+  font-family: inherit;
+  color: #111827;
+  background: #ffffff;
+  transition: border-color 0.15s;
+  -webkit-appearance: none;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: #6649ae;
+  box-shadow: 0 0 0 3px rgba(102, 73, 174, 0.15);
+}
+
+.textarea { resize: vertical; min-height: 120px; }
+
+.submitBtn {
+  padding: 0.75rem 1.5rem;
+  background: #6649ae;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s;
+  width: 100%;
+}
+
+.submitBtn:hover { opacity: 0.88; }
+
+.formNote { font-size: 0.8125rem; color: #9ca3af; }
+
+@media (min-width: 768px) {
+  .page { padding: 4rem 2rem 6rem; }
+  .title { font-size: 2.25rem; }
+  .grid { flex-direction: row; align-items: flex-start; }
+  .details { flex: 0 0 260px; }
+  .form { flex: 1; }
+  .submitBtn { width: auto; }
+}

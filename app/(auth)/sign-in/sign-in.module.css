@@ -1,0 +1,63 @@
+/*
+ * sign-in.module.css
+ * Full-viewport shell for the sign-in page.
+ * The gradient is scoped here — it does NOT apply to public or authenticated pages.
+ */
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(160deg, #6649ae 0%, #9b7fe8 50%, #e9e3ff 100%);
+  background-attachment: fixed;
+}
+
+/* ── Minimal header ─────────────────────────────────────────────────────── */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  /* Subtle frosted glass effect over the gradient */
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.logo {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+
+.backLink {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.backLink:hover {
+  color: #ffffff;
+}
+
+/* ── Auth form container ────────────────────────────────────────────────── */
+/* The Amplify Authenticator renders into the layout wrapper above this div.
+   This container just provides vertical centering for the form. */
+.authContainer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem 3rem;
+}
+
+/* ── Desktop: wider header padding ─────────────────────────────────────── */
+@media (min-width: 768px) {
+  .header {
+    padding: 1rem 2.5rem;
+  }
+}

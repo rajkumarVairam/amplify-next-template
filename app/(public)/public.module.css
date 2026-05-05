@@ -1,0 +1,27 @@
+/*
+ * public.module.css — shell for all public (marketing) pages.
+ *
+ * Overrides any body-level styles so the public site has a clean
+ * white background, full-width layout, and no flex-centering.
+ */
+
+.shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  background: #ffffff;
+  color: #111827;
+  /* Ensure no inherited centering from body bleeds in */
+  align-items: stretch;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.main {
+  flex: 1;
+  width: 100%;
+  /* Prevent any max-width constraint at the shell level —
+     each page section controls its own max-width */
+  max-width: none;
+}

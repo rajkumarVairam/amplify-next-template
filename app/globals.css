@@ -1,62 +1,30 @@
-:root {
-  --max-width: 1100px;
-  --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+/*
+ * globals.css — CSS custom properties (design tokens)
+ *
+ * These variables are consumed by all authenticated page components
+ * via var(--bg), var(--accent), etc.
+ *
+ * Theme is applied by setting data-theme="light" or data-theme="dark"
+ * on <html> via lib/theme-utils.ts. Light is the default.
+ */
 
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: #CBBEFF;
-  --background-end-rgb: 255, 255, 255;
-
-  --callout-rgb: 238, 240, 241;
-  --callout-border-rgb: 172, 175, 176;
-  --card-rgb: #6649AE;
-  --card-border-rgb: 131, 134, 135;
+/* ── Light theme (default) ──────────────────────────────────────────────── */
+:root,
+[data-theme="light"] {
+  --bg:         #ffffff;
+  --fg:         #111827;
+  --surface:    #f9fafb;
+  --accent:     #6649ae;
+  --border:     #e5e7eb;
+  --text-muted: #6b7280;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-
-    --callout-rgb: 20, 20, 20;
-    --callout-border-rgb: 108, 108, 108;
-    --card-rgb: 100, 100, 100;
-    --card-border-rgb: 200, 200, 200;
-  }
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+/* ── Dark theme ─────────────────────────────────────────────────────────── */
+[data-theme="dark"] {
+  --bg:         #0f0f0f;
+  --fg:         #f3f4f6;
+  --surface:    #1a1a1a;
+  --accent:     #cbbeff;
+  --border:     #2d2d2d;
+  --text-muted: #9ca3af;
 }

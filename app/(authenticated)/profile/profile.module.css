@@ -1,0 +1,52 @@
+/*
+ * profile.module.css — mobile-first
+ *
+ * Base (mobile): full-width, comfortable padding, readable line lengths.
+ * min-width: 768px: wider padding, constrained max-width for readability.
+ */
+
+/* ── Base: mobile ───────────────────────────────────────────────────────── */
+.page {
+  padding: 1.25rem 1rem;
+  width: 100%;
+}
+
+.heading {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--fg);
+  margin-bottom: 1.25rem;
+}
+
+.section {
+  margin-bottom: 1.75rem;
+}
+
+.success {
+  color: #22c55e;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+.error {
+  color: #ef4444;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+/* ── Desktop: wider padding, constrained width ──────────────────────────── */
+@media (min-width: 768px) {
+  .page {
+    padding: 2rem;
+    max-width: 640px;
+  }
+
+  .heading {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .section {
+    margin-bottom: 2rem;
+  }
+}

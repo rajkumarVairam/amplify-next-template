@@ -1,0 +1,33 @@
+/*
+ * layout.module.css — mobile-first authenticated shell
+ *
+ * Base (mobile): single column, Nav stacks above content.
+ * min-width: 768px: Nav becomes a fixed 240px sidebar, content fills the rest.
+ */
+
+/* ── Base: mobile single-column stack ──────────────────────────────────── */
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--fg);
+}
+
+.content {
+  flex: 1;
+  width: 100%;
+  overflow-y: auto;
+}
+
+/* ── Desktop: sidebar + content row ────────────────────────────────────── */
+@media (min-width: 768px) {
+  .layout {
+    flex-direction: row;
+  }
+
+  .content {
+    margin-left: 240px;
+    width: calc(100% - 240px);
+  }
+}

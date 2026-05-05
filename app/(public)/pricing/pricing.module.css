@@ -1,0 +1,103 @@
+/* pricing.module.css — mobile-first */
+
+.page { width: 100%; }
+
+.hero {
+  padding: 3rem 1rem;
+  text-align: center;
+  background: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.heroTitle { font-size: 1.75rem; font-weight: 800; color: #111827; margin-bottom: 0.75rem; }
+.heroSubtitle { font-size: 1rem; color: #6b7280; max-width: 480px; margin: 0 auto; }
+
+/* Mobile: stacked cards */
+.plans {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2.5rem 1rem;
+}
+
+.plan {
+  position: relative;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.75rem 1.5rem;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.highlighted {
+  border-color: #6649ae;
+  box-shadow: 0 0 0 2px #6649ae;
+}
+
+.badge {
+  position: absolute;
+  top: -0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #6649ae;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.75rem;
+  border-radius: 99px;
+  white-space: nowrap;
+}
+
+.planName { font-size: 1.125rem; font-weight: 700; color: #111827; }
+
+.planPrice { display: flex; align-items: baseline; gap: 0.375rem; }
+.price { font-size: 2rem; font-weight: 800; color: #111827; }
+.period { font-size: 0.875rem; color: #6b7280; }
+
+.planDesc { font-size: 0.9rem; color: #6b7280; }
+
+.featureList { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; flex: 1; }
+.featureItem { display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.9rem; color: #374151; }
+.check { color: #6649ae; font-weight: 700; flex-shrink: 0; }
+
+.planCta {
+  display: block;
+  text-align: center;
+  padding: 0.7rem 1.25rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  text-decoration: none;
+  border: 2px solid #6649ae;
+  color: #6649ae;
+  transition: background 0.15s, color 0.15s;
+}
+
+.planCta:hover { background: #6649ae; color: #fff; }
+
+.planCtaHighlighted { background: #6649ae; color: #fff; }
+.planCtaHighlighted:hover { opacity: 0.88; background: #6649ae; color: #fff; }
+
+.faq {
+  background: #f9fafb;
+  padding: 3rem 1rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.faqTitle { font-size: 1.375rem; font-weight: 700; color: #111827; text-align: center; margin-bottom: 2rem; }
+
+.faqGrid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; max-width: 800px; margin: 0 auto; }
+.faqGrid h3 { font-size: 0.9375rem; font-weight: 600; color: #111827; margin-bottom: 0.375rem; }
+.faqGrid p { font-size: 0.9rem; color: #6b7280; line-height: 1.6; }
+
+@media (min-width: 768px) {
+  .hero { padding: 5rem 2rem; }
+  .heroTitle { font-size: 2.5rem; }
+  .plans { grid-template-columns: repeat(3, 1fr); padding: 4rem 2rem; }
+  .faq { padding: 4rem 2rem; }
+  .faqGrid { grid-template-columns: repeat(2, 1fr); }
+}

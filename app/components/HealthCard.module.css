@@ -1,0 +1,58 @@
+/*
+ * HealthCard.module.css — mobile-first
+ *
+ * No breakpoints needed — the card is a self-contained block that
+ * fills whatever column the parent grid assigns it.
+ */
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.125rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  font-weight: 600;
+  font-size: 0.9375rem;
+  color: var(--fg);
+}
+
+.statusRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Status dot */
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.statusHealthy {
+  background: #22c55e;
+}
+
+.statusUnavailable {
+  background: #ef4444;
+}
+
+.statusChecking {
+  background: #94a3b8;
+}
+
+.statusText {
+  font-size: 0.875rem;
+  color: var(--fg);
+}
+
+.detail {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}

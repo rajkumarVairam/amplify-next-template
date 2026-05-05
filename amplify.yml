@@ -3,19 +3,25 @@ backend:
   phases:
     build:
       commands:
-        - npm ci --cache .npm --prefer-offline
+        # Deploy the Amplify Gen 2 backend (auth, data, storage) to the
+        # branch environment before building the frontend.
+        - npm ci
         - npx ampx pipeline-deploy --branch $AWS_BRANCH --app-id $AWS_APP_ID
 frontend:
   phases:
+    preBuild:
+      commands:
+        - npm ci
     build:
       commands:
         - npm run build
   artifacts:
+    # Next.js 14 SSR — artifacts live in .next, not out
     baseDirectory: .next
     files:
       - '**/*'
   cache:
+    # Cache node_modules to speed up subsequent builds and reduce build minutes
     paths:
-      - .next/cache/**/*
-      - .npm/**/*
       - node_modules/**/*
+      - .next/cache/**/*

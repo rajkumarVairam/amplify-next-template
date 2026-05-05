@@ -1,0 +1,61 @@
+/*
+ * auth.module.css — sign-in page shell
+ * Gradient background, minimal header, centred auth form.
+ */
+
+/* ── Full-viewport shell ────────────────────────────────────────────────── */
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(160deg, #6649ae 0%, #9b7fe8 50%, #e9e3ff 100%);
+  background-attachment: fixed;
+}
+
+/* ── Minimal header ─────────────────────────────────────────────────────── */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  flex-shrink: 0;
+}
+
+.logo {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+
+.backLink {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.backLink:hover {
+  color: #ffffff;
+}
+
+/* ── Auth form area — vertically centred ────────────────────────────────── */
+.authContainer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem 3rem;
+}
+
+/* ── Desktop ────────────────────────────────────────────────────────────── */
+@media (min-width: 768px) {
+  .header {
+    padding: 1rem 2.5rem;
+  }
+}
